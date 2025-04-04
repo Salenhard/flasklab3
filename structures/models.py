@@ -28,7 +28,6 @@ def insert_building(building):
 
 def update_building(id, data):
     building = Building.query.get(id)
-    building_schema.update(building, session=db.session)
     if not building:
         raise ValueError("Building not found")
 
